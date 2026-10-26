@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Encuesta-Estadísticas</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="banner" src="../img/banner.png" alt="Banner">
+        <div id="navbar"></div>
+    </header>
+
+    <main class="main">
+        <section id="realizar-encuesta">
+            <h1>Encuesta</h1>
+            <p>Tu opinión es parte de este proyecto. Respondé esta encuesta de forma anónima para que podamos conocer cómo vivís la educación sexual, la salud menstrual y la ESI en el grupo.</p>
+
+            <form class="encuesta-form" id="form-encuesta">
+                <fieldset>
+                    <legend>1. Sobre tu participación</legend>
+
+                    <label for="rama">¿A qué rama pertenecés?</label>
+                    <select id="rama" name="rama" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Manada">Manada</option>
+                        <option value="Unidad">Unidad</option>
+                        <option value="Caminantes">Caminantes</option>
+                        <option value="Rovers">Rovers</option>
+                    </select>
+
+                    <label for="participacion">¿Participaste de alguna actividad de este proyecto?</label>
+                    <select id="participacion" name="participacion" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, en varias">Sí, en varias</option>
+                        <option value="Sí, en una">Sí, en una</option>
+                        <option value="Todavía no">Todavía no</option>
+                    </select>
+
+                    <label>¿Recibiste información sobre salud menstrual en el grupo scout?</label>
+                    <div class="opciones">
+                        <label><input type="radio" name="infoMenstrualScouts" value="1"><span>Sí</span></label>
+                        <label><input type="radio" name="infoMenstrualScouts" value="0"><span>No</span></label>
+                    </div>
+
+                    <label>¿Qué tan informada/o te sentís sobre el ciclo menstrual y la salud menstrual?</label>
+                    <div class="rating">
+                        <label><input type="radio" name="informacion" value="1"><span>1 - Nada</span></label>
+                        <label><input type="radio" name="informacion" value="2"><span>2</span></label>
+                        <label><input type="radio" name="informacion" value="3"><span>3</span></label>
+                        <label><input type="radio" name="informacion" value="4"><span>4</span></label>
+                        <label><input type="radio" name="informacion" value="5"><span>5 - Mucho</span></label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Salud menstrual</legend>
+
+                    <label>¿Qué productos de gestión menstrual conocés o usás? (podés elegir varios)</label>
+                    <div class="opciones">
+                        <label><input type="checkbox" name="productosDisponibles" value="Toallitas"><span>Toallitas</span></label>
+                        <label><input type="checkbox" name="productosDisponibles" value="Tampones"><span>Tampones</span></label>
+                        <label><input type="checkbox" name="productosDisponibles" value="Protectores diarios"><span>Protectores diarios</span></label>
+                        <label><input type="checkbox" name="productosDisponibles" value="Copa menstrual"><span>Copa menstrual</span></label>
+                        <label><input type="checkbox" name="productosDisponibles" value="Toallitas reutilizables"><span>Toallitas reutilizables</span></label>
+                    </div>
+
+                    <label for="otroProducto">¿Usás algún otro producto? (opcional)</label>
+                    <input type="text" id="otroProducto" name="otroProducto" maxlength="200" placeholder="Por ejemplo: ropa interior menstrual">
+
+                    <label for="hablaMenstruacion">¿Con qué naturalidad se habla de la menstruación en tu entorno?</label>
+                    <select id="hablaMenstruacion" name="hablaMenstruacion" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Con total naturalidad">Con total naturalidad</option>
+                        <option value="Con algunas incomodidades">Con algunas incomodidades</option>
+                        <option value="Es un tema tabú">Es un tema tabú</option>
+                        <option value="No se habla">No se habla</option>
+                    </select>
+
+                    <label for="interrupcionActividad">¿Alguna vez la menstruación te impidió participar de una actividad del grupo?</label>
+                    <select id="interrupcionActividad" name="interrupcionActividad" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, seguido">Sí, seguido</option>
+                        <option value="Alguna vez">Alguna vez</option>
+                        <option value="No, nunca">No, nunca</option>
+                        <option value="No me corresponde">No me corresponde</option>
+                    </select>
+
+                    <label for="necesitoSinProducto">¿Alguna vez necesitaste un producto de higiene menstrual y no lo tenías a mano?</label>
+                    <select id="necesitoSinProducto" name="necesitoSinProducto" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, seguido">Sí, seguido</option>
+                        <option value="Alguna vez">Alguna vez</option>
+                        <option value="No, nunca">No, nunca</option>
+                        <option value="No me corresponde">No me corresponde</option>
+                    </select>
+
+                    <label>¿Qué tan natural es para vos hablar de la menstruación?</label>
+                    <div class="rating">
+                        <label><input type="radio" name="naturalidadMenstruacion" value="1"><span>1 - Nada</span></label>
+                        <label><input type="radio" name="naturalidadMenstruacion" value="2"><span>2</span></label>
+                        <label><input type="radio" name="naturalidadMenstruacion" value="3"><span>3</span></label>
+                        <label><input type="radio" name="naturalidadMenstruacion" value="4"><span>4</span></label>
+                        <label><input type="radio" name="naturalidadMenstruacion" value="5"><span>5 - Mucho</span></label>
+                    </div>
+
+                    <label for="igualdadParticipacion">¿Notás igualdad de participación entre géneros en las actividades del grupo?</label>
+                    <select id="igualdadParticipacion" name="igualdadParticipacion" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, siempre">Sí, siempre</option>
+                        <option value="En general sí">En general sí</option>
+                        <option value="No, se nota la diferencia">No, se nota la diferencia</option>
+                        <option value="No lo noté">No lo noté</option>
+                    </select>
+
+                    <label for="comentariosMenstruacion">¿Querés sumar algún comentario sobre la salud menstrual en el grupo?</label>
+                    <textarea id="comentariosMenstruacion" name="comentariosMenstruacion" maxlength="2000" placeholder="Escribí lo que quieras compartir..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Educación Sexual Integral (ESI)</legend>
+
+                    <label>¿Sabías que la ESI está garantizada por ley en la Argentina?</label>
+                    <div class="opciones">
+                        <label><input type="radio" name="conoceESI" value="1"><span>Sí</span></label>
+                        <label><input type="radio" name="conoceESI" value="0"><span>No</span></label>
+                    </div>
+
+                    <label>¿Cómo calificarías tu nivel de conocimiento sobre ESI?</label>
+                    <div class="rating">
+                        <label><input type="radio" name="conocimiento" value="1"><span>1 - Nada</span></label>
+                        <label><input type="radio" name="conocimiento" value="2"><span>2</span></label>
+                        <label><input type="radio" name="conocimiento" value="3"><span>3</span></label>
+                        <label><input type="radio" name="conocimiento" value="4"><span>4</span></label>
+                        <label><input type="radio" name="conocimiento" value="5"><span>5 - Mucho</span></label>
+                    </div>
+
+                    <label>¿Qué ejes de la ESI te interesan? (podés elegir varios)</label>
+                    <div class="opciones">
+                        <label><input type="checkbox" name="temasESI" value="Cuidado de la salud"><span>Cuidado de la salud</span></label>
+                        <label><input type="checkbox" name="temasESI" value="Afectividad"><span>Afectividad</span></label>
+                        <label><input type="checkbox" name="temasESI" value="Derechos"><span>Derechos</span></label>
+                        <label><input type="checkbox" name="temasESI" value="Diversidad"><span>Diversidad</span></label>
+                        <label><input type="checkbox" name="temasESI" value="Identidad"><span>Identidad</span></label>
+                    </div>
+
+                    <label for="trabajaESI">¿Se trabaja la ESI en tu rama?</label>
+                    <select id="trabajaESI" name="trabajaESI" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, seguido">Sí, seguido</option>
+                        <option value="A veces">A veces</option>
+                        <option value="Casi nunca">Casi nunca</option>
+                        <option value="Nunca">Nunca</option>
+                        <option value="No sé">No sé</option>
+                    </select>
+
+                    <label for="frecuenciaESI">¿Con qué frecuencia se abordan estos temas en el grupo?</label>
+                    <select id="frecuenciaESI" name="frecuenciaESI" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Varias veces por año">Varias veces por año</option>
+                        <option value="Una vez por año">Una vez por año</option>
+                        <option value="Casi nunca">Casi nunca</option>
+                        <option value="Nunca">Nunca</option>
+                    </select>
+
+                    <label>¿Qué tan cómoda/o te sentís hablando de ESI con tus hermanos y educadores?</label>
+                    <div class="rating">
+                        <label><input type="radio" name="comodidadESI" value="1"><span>1 - Nada</span></label>
+                        <label><input type="radio" name="comodidadESI" value="2"><span>2</span></label>
+                        <label><input type="radio" name="comodidadESI" value="3"><span>3</span></label>
+                        <label><input type="radio" name="comodidadESI" value="4"><span>4</span></label>
+                        <label><input type="radio" name="comodidadESI" value="5"><span>5 - Mucho</span></label>
+                    </div>
+
+                    <label for="infoGrupoESI">¿Recibís información sobre ESI en el grupo scout?</label>
+                    <select id="infoGrupoESI" name="infoGrupoESI" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, suficiente">Sí, suficiente</option>
+                        <option value="Sí, pero poca">Sí, pero poca</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label>¿Hay alguna persona referente de ESI en el grupo?</label>
+                    <div class="opciones">
+                        <label><input type="radio" name="referenteESI" value="1"><span>Sí</span></label>
+                        <label><input type="radio" name="referenteESI" value="0"><span>No</span></label>
+                    </div>
+
+                    <label for="herramientasEducadores">¿Creés que los educadores cuentan con herramientas para trabajar estos temas?</label>
+                    <select id="herramientasEducadores" name="herramientasEducadores" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, totalmente">Sí, totalmente</option>
+                        <option value="En parte">En parte</option>
+                        <option value="No">No</option>
+                        <option value="No sé">No sé</option>
+                    </select>
+
+                    <label for="masESI">¿Te gustaría que se trabajara más ESI en el grupo?</label>
+                    <select id="masESI" name="masESI" required>
+                        <option value="" disabled selected>Elegí una opción</option>
+                        <option value="Sí, mucho">Sí, mucho</option>
+                        <option value="Sí, un poco">Sí, un poco</option>
+                        <option value="No, está bien así">No, está bien así</option>
+                    </select>
+
+                    <label>¿Cómo evaluás este proyecto en general?</label>
+                    <div class="rating">
+                        <label><input type="radio" name="evaluacionGeneral" value="1"><span>1 - Muy malo</span></label>
+                        <label><input type="radio" name="evaluacionGeneral" value="2"><span>2</span></label>
+                        <label><input type="radio" name="evaluacionGeneral" value="3"><span>3</span></label>
+                        <label><input type="radio" name="evaluacionGeneral" value="4"><span>4</span></label>
+                        <label><input type="radio" name="evaluacionGeneral" value="5"><span>5 - Excelente</span></label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-enviar">Enviar encuesta</button>
+                <div class="encuesta-mensaje" id="mensaje-encuesta" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <section id="estadisticas">
+            <h2>Estadísticas de la encuesta</h2>
+            <p id="total-encuestas"></p>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/config.js" defer></script>
+    <script src="../js/encuesta-api.js" defer></script>
+    <script src="../js/script.js" defer></script>
+    <script src="../js/navbar.js" data-base="../" defer></script>
+    <script src="../js/footer.js" data-base="../" defer></script>
+</body>
+
+</html>

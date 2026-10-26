@@ -1,5 +1,14 @@
-# Dependencias (cuando migres a React/Vite)
+# Dependencias
 node_modules/
+
+# Base de datos SQLite
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Metadatos de Windows (Zone.Identifier)
+*.Identifier
 
 # Archivos del sistema operativo
 .DS_Store
@@ -15,3 +24,7 @@ build/
 
 # Archivos de editores
 .vscode/
+
+# Respaldos y herramientas locales
+.local/
+coverage/
